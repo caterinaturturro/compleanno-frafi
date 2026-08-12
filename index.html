@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buon compleanno ciccino 💗</title>
+    <link rel="stylesheet" href="prova.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         1. SCHERMATA MAIL
+    ====================================================== -->
+
+    <main class="home" id="home">
+
+        <div class="mail-wrapper">
+
+            <div class="mail-header">
+
+                <div class="mail-icon">✉</div>
+
+                <div class="mail-info">
+                    <p class="mail-label">NUOVO MESSAGGIO</p>
+                    <p class="mail-time">adesso</p>
+                </div>
+
+            </div>
+
+            <div class="mail-card">
+
+                <div class="mail-row">
+                    <span>Da</span>
+                    <strong>katusha</strong>
+                </div>
+
+                <div class="mail-row">
+                    <span>A</span>
+                    <strong>juan</strong>
+                </div>
+
+                <div class="mail-row subject-row">
+                    <span>Oggetto</span>
+                    <strong>buon compleanno ciccino 💗</strong>
+                </div>
+
+                <div class="mail-divider"></div>
+
+                <p class="mail-preview">
+                    Hai ricevuto qualcosina di speciale...
+                </p>
+
+                <button id="startButton" type="button">
+                    <span>✉</span>
+                    Apri il messaggio
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         2. ALBUM FOTO
+    ====================================================== -->
+
+    <section id="album">
+
+        <div class="album-content">
+
+            <p class="album-small">per te 💗</p>
+
+            <h2>Alcuni dei nostri ricordi</h2>
+
+            <div class="polaroid">
+
+                <img
+                    id="polaroidImage"
+                    src="foto/foto1.jpg"
+                    alt="Ricordo"
+                    class="polaroid-photo"
+                >
+
+                <p id="photoCaption">
+                    la nostra prima fotina insieme
+                </p>
+
+            </div>
+
+            <button id="nextPhoto" type="button">
+                Scorri per continuare →
+            </button>
+
+            <p class="photoCounter">
+                <span id="currentPhoto">1</span> / 15
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         3. BUSTA / LETTERA
+    ====================================================== -->
+
+    <section id="letter-section">
+
+        <div class="letter-intro">
+
+            <p>la sorpresa continua...</p>
+
+            <h2>Una letterina 💌</h2>
+
+        </div>
+
+
+        <div class="vintage-letter" id="letterEnvelope">
+
+            <div class="envelope-body">
+
+                <div class="fold-left"></div>
+                <div class="fold-right"></div>
+                <div class="envelope-flap"></div>
+
+            </div>
+
+
+            <div class="wax-seal">
+
+                <div class="wax-center">
+                    ♥
+                </div>
+
+            </div>
+
+
+            <div class="letter-paper">
+
+                <div class="letter-paper-content">
+
+                    <p class="letter-date">
+                        17 agosto 2026
+                    </p>
+
+                    <h3>al mio polpettino,</h3>
+
+                    <p>
+                        ho qualcosa da dirti...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="letter-hint">
+            tocca la lettera per aprirla
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         4. PAGINA DELLA LETTERA
+    ====================================================== -->
+
+    <div id="letter-page">
+
+        <div class="papyrus">
+
+            <div class="papyrus-content">
+
+                <p class="written-date">
+                    17 agosto 2026
+                </p>
+
+                <div id="typed-letter"></div>
+
+                <p class="letter-signature">
+                    la tua lemure💗
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button id="skipTyping" type="button">
+            Mostra tutta la lettera →
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         5. TRANSIZIONE LETTERA → TELEFONO
+    ====================================================== -->
+
+    <div id="letter-transition">
+
+        <div class="flying-papyrus"></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         6. TELEFONO
+    ====================================================== -->
+
+    <section id="phone-section">
+
+        <div class="phone-container">
+
+            <div class="flip-phone" id="flipPhone">
+
+                <!-- TELEFONO CHIUSO -->
+
+                <div class="phone-closed">
+
+                    <div class="closed-camera"></div>
+
+                    <div class="closed-brand">
+                        LOV U
+                    </div>
+
+                    <div class="closed-heart">
+                        ♥
+                    </div>
+
+                    <p>
+                        tocca per aprire
+                    </p>
+
+                </div>
+
+
+                <!-- PARTE SUPERIORE -->
+
+                <div class="phone-top">
+
+                    <div class="phone-screen">
+
+                        <div class="phone-brand">
+                            LOV U
+                        </div>
+
+                        <div class="phone-display">
+
+                            <span></span>
+
+                            <p>
+                                Inserisci il codice
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="phone-speaker"></div>
+
+                </div>
+
+
+                <!-- CERNIERA -->
+
+                <div class="phone-hinge"></div>
+
+
+                <!-- PARTE INFERIORE -->
+
+                <div class="phone-bottom">
+
+                    <div class="phone-keypad">
+
+                        <button type="button">1</button>
+                        <button type="button">2</button>
+                        <button type="button">3</button>
+
+                        <button type="button">4</button>
+                        <button type="button">5</button>
+                        <button type="button">6</button>
+
+                        <button type="button">7</button>
+                        <button type="button">8</button>
+                        <button type="button">9</button>
+
+                        <button type="button">*</button>
+                        <button type="button">0</button>
+                        <button type="button">#</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- =====================================================
+     7. SCHERMATA GIRADISCHI
+===================================================== -->
+
+<section id="record-section">
+
+    <div class="record-content">
+
+        <p class="record-small">
+            UNA CANZONE PER TE
+        </p>
+
+        <h2>
+            Ho qualcosa da farti ascoltare...
+        </h2>
+
+        <p class="record-subtitle">
+            Prendi il vinile e appoggialo sul giradischi.
+        </p>
+
+
+        <!-- =================================================
+             GIRADISCHI
+        ================================================== -->
+
+        <div class="turntable-area">
+
+            <div
+                class="turntable"
+                id="turntable"
+            >
+
+                <!-- PIATTO -->
+
+                <div
+                    class="turntable-platter"
+                    id="turntablePlatter"
+                >
+
+                    <div class="platter-center"></div>
+
+                </div>
+
+
+                <!-- VINILE SUL GIRADISCHI -->
+
+                <div
+                    class="record-on-player"
+                    id="recordOnPlayer"
+                >
+
+                    <div class="record-grooves"></div>
+
+                    <div class="record-label">
+                        <span>
+                            FOR YOU
+                        </span>
+                    </div>
+
+                    <div class="record-hole"></div>
+
+                </div>
+
+
+                <!-- BRACCIO -->
+
+                <div class="tonearm">
+
+                    <div class="tonearm-base"></div>
+                    <div class="tonearm-arm"></div>
+                    <div class="tonearm-head"></div>
+
+                </div>
+
+
+                <!-- LOGO -->
+
+                <div class="turntable-logo">
+                    ♡
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VINILE DA TRASCINARE
+            ================================================== -->
+
+            <div
+                class="record-source"
+                id="recordSource"
+                draggable="true"
+            >
+
+                <div class="vinyl">
+
+                    <div class="vinyl-grooves"></div>
+
+                    <div class="vinyl-label">
+
+                        <span>
+                            FOR<br>
+                            YOU
+                        </span>
+
+                    </div>
+
+                    <div class="vinyl-hole"></div>
+
+                </div>
+
+                <p>
+                    trascinami
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             MESSAGGIO
+        ================================================== -->
+
+        <div
+            class="record-message"
+            id="recordMessage"
+        >
+
+            <p>
+                Questa canzone è per te. ❤️
+            </p>
+
+            <span>
+                Spero che ogni volta che la ascolterai
+                penserai un po' a noi.
+            </span>
+
+        </div>
+
+
+        <!-- =================================================
+             CONTROLLI MUSICA
+        ================================================== -->
+
+        <div
+            class="music-controls"
+            id="musicControls"
+        >
+
+            <button
+                type="button"
+                id="playPauseMusic"
+                aria-label="Metti in pausa o riprendi la canzone"
+            >
+                ▶
+            </button>
+
+            <div class="music-info">
+
+                <span class="music-title">
+                    La nostra canzone
+                </span>
+
+                <span
+                    class="music-status"
+                >
+                    Premi play per ascoltare ❤️
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PLAYER SPOTIFY
+        ================================================== -->
+
+        <div
+            id="spotifyPlayerWrapper"
+            class="spotify-player-wrapper"
+        >
+
+            <div id="spotifyEmbed"></div>
+
+            <a
+                id="spotifyOpenLink"
+                href="https://open.spotify.com/track/5l6hpyTGBK0LAAxgPnqTQL"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Apri su Spotify
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             FRECCIA → SCHERMATA FINALE
+
+             IMPORTANTE:
+             È DENTRO record-section ma NON dipende
+             dalla musica.
+        ================================================== -->
+
+        <button
+            id="recordNextButton"
+            class="record-next-button"
+            type="button"
+            aria-label="Continua"
+        >
+            ↓
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     8. SCHERMATA FINALE
+===================================================== -->
+
+<section
+    id="final-section"
+    class="final-section"
+>
+
+    <div class="final-content">
+
+        <h1>
+            BUON COMPLEANNO FRAFI
+                    
+        </h1>
+
+
+
+        <!-- =================================================
+             TORTA
+        ================================================== -->
+
+        <div
+            id="birthdayCake"
+            class="birthday-cake"
+            role="button"
+            tabindex="0"
+            aria-label="Apri la torta"
+        >
+
+            <div class="cake-candles">
+
+                <div class="candle">
+                    <span></span>
+                </div>
+
+                <div class="candle">
+                    <span></span>
+                </div>
+
+                <div class="candle">
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <div class="cake-top"></div>
+
+            <div class="cake-middle"></div>
+
+            <div class="cake-bottom"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             FOTO DA PICCOLO
+
+             SOSTITUISCI foto-francesco.jpg
+             con il nome della tua foto.
+        ================================================== -->
+
+        <div
+            id="childPhotoContainer"
+            class="child-photo-container"
+        >
+
+            <img
+                id="childPhoto"
+                src="foto/foto-francesco.jpg"
+                alt="Francesco da piccolo"
+            >
+
+        </div>
+
+
+        <!-- =================================================
+             FRASE FINALE
+        ================================================== -->
+
+        <p class="final-message">
+            Spero che questa sorpresina ti sia piaciuta. ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SPOTIFY IFRAME API
+===================================================== -->
+
+<script
+    src="https://open.spotify.com/embed/iframe-api/v1"
+    async
+></script>
+<!-- =====================================================
+     SCRIPT
+====================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

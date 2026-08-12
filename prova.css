@@ -1,0 +1,4324 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            #fff4f7 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            #f5dfe6 0%,
+            transparent 40%
+        ),
+        #f8f1f2;
+
+    color: #4d4246;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIL
+========================================================= */
+
+.home {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+}
+
+.mail-wrapper {
+    width: 100%;
+    max-width: 430px;
+
+    animation:
+        mailAppear 0.8s ease both;
+}
+
+.mail-header {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+.mail-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #dca9b8;
+    color: white;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(150, 95, 110, 0.15);
+}
+
+.mail-label {
+    font-size: 11px;
+
+    font-weight: 600;
+    letter-spacing: 1.8px;
+
+    color: #8d747b;
+}
+
+.mail-time {
+    margin-top: 3px;
+
+    font-size: 11px;
+    color: #aaa0a4;
+}
+
+.mail-card {
+    width: 100%;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border:
+        1px solid
+        rgba(224, 211, 215, 0.8);
+
+    border-radius: 20px;
+
+    padding:
+        26px 22px 28px;
+
+    box-shadow:
+        0 20px 55px
+        rgba(70, 45, 52, 0.10);
+}
+
+.mail-row {
+    display: flex;
+    align-items: baseline;
+
+    gap: 18px;
+
+    padding: 8px 0;
+
+    font-size: 14px;
+}
+
+.mail-row span {
+    width: 55px;
+
+    flex-shrink: 0;
+
+    color: #a69a9f;
+
+    font-size: 12px;
+}
+
+.mail-row strong {
+    color: #51464a;
+
+    font-weight: 500;
+
+    word-break: break-word;
+}
+
+.subject-row {
+    padding-top: 16px;
+    padding-bottom: 17px;
+}
+
+.subject-row strong {
+    color: #694552;
+
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.mail-divider {
+    width: 100%;
+    height: 1px;
+
+    background: #eee7e9;
+
+    margin:
+        5px 0 23px;
+}
+
+.mail-preview {
+    text-align: center;
+
+    color: #88777c;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+#startButton {
+    display: block;
+
+    margin:
+        0 auto;
+
+    border: none;
+    border-radius: 50px;
+
+    padding:
+        14px 25px;
+
+    background: #dca9b8;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 22px
+        rgba(170, 105, 125, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#startButton span {
+    margin-right: 7px;
+
+    font-size: 15px;
+}
+
+#startButton:hover {
+    background: #cf94a6;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 11px 25px
+        rgba(170, 105, 125, 0.25);
+}
+
+#startButton:active {
+    transform:
+        scale(0.96);
+}
+
+@keyframes mailAppear {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(18px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   ALBUM
+========================================================= */
+
+#album {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 20% 15%,
+            #fff6f8 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            #f3dfe6 0%,
+            transparent 40%
+        ),
+        #faf4f5;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    overflow: hidden;
+
+    opacity: 0;
+}
+
+.album-content {
+    width: 100%;
+    max-width: 430px;
+
+    text-align: center;
+
+    animation:
+        albumAppear 1s ease forwards;
+}
+
+.album-small {
+    font-size: 11px;
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    color: #a27d87;
+
+    margin-bottom: 14px;
+}
+
+.album-content h2 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+    font-weight: normal;
+
+    line-height: 1.2;
+
+    color: #65454e;
+
+    margin-bottom: 30px;
+}
+
+.polaroid {
+    width:
+        min(82vw, 310px);
+
+    margin:
+        0 auto;
+
+    padding:
+        14px 14px 42px;
+
+    background:
+        white;
+
+    box-shadow:
+        0 18px 45px
+        rgba(70, 45, 52, 0.16);
+
+    transform:
+        rotate(-3deg);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.polaroid:hover {
+    transform:
+        rotate(0deg)
+        scale(1.02);
+}
+
+.polaroid-photo {
+    width: 100%;
+
+    aspect-ratio:
+        1 / 1;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+}
+
+.polaroid p {
+    font-family:
+        Georgia,
+        serif;
+
+    color:
+        #6f555d;
+
+    font-size:
+        15px;
+
+    margin-top:
+        17px;
+}
+
+#nextPhoto {
+    display:
+        block;
+
+    margin:
+        30px auto 10px;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        #9b7782;
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        1px;
+
+    cursor:
+        pointer;
+
+    padding:
+        10px;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+#nextPhoto:hover {
+    opacity:
+        0.65;
+
+    transform:
+        translateX(4px);
+}
+
+.photoCounter {
+    font-size:
+        10px;
+
+    color:
+        #b6a4aa;
+
+    letter-spacing:
+        1px;
+
+    margin-top:
+        2px;
+}
+
+.photo-changing {
+    animation:
+        photoChange 0.5s ease;
+}
+
+@keyframes photoChange {
+    0% {
+        opacity: 1;
+
+        transform:
+            rotate(-3deg)
+            scale(1);
+    }
+
+    50% {
+        opacity: 0;
+
+        transform:
+            rotate(2deg)
+            scale(0.96);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            rotate(-3deg)
+            scale(1);
+    }
+}
+
+@keyframes albumAppear {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   LETTERA - BUSTA
+========================================================= */
+
+#letter-section {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #f8eedc 0%,
+            #ead9bd 65%,
+            #ddc8a8 100%
+        );
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.7s ease;
+}
+
+#letter-section.show-letter {
+    display: flex;
+
+    opacity: 1;
+}
+
+.letter-intro {
+    text-align:
+        center;
+
+    margin-bottom:
+        28px;
+
+    z-index:
+        10;
+}
+
+.letter-intro p {
+    margin:
+        0 0 9px;
+
+    font-size:
+        10px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        3px;
+
+    color:
+        #8b7060;
+}
+
+.letter-intro h2 {
+    margin:
+        0;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        30px;
+
+    font-weight:
+        normal;
+
+    color:
+        #513a30;
+}
+
+.vintage-letter {
+    position:
+        relative;
+
+    width:
+        min(84vw, 360px);
+
+    aspect-ratio:
+        1.48 / 1;
+
+    cursor:
+        pointer;
+
+    transform:
+        rotate(-1.5deg);
+
+    filter:
+        drop-shadow(
+            0 20px 22px
+            rgba(65,42,28,0.23)
+        );
+
+    transition:
+        transform 0.35s ease;
+}
+
+.vintage-letter:hover {
+    transform:
+        rotate(0deg)
+        translateY(-4px);
+}
+
+.envelope-body {
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f5e6c9,
+            #ead5b3
+        );
+
+    border:
+        1px solid
+        rgba(117,83,55,0.35);
+
+    border-radius:
+        2px;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(255,255,255,0.25),
+
+        inset 0 0 35px
+        rgba(113,78,48,0.10);
+}
+
+.envelope-body::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    opacity:
+        0.22;
+
+    background-image:
+        radial-gradient(
+            rgba(95,65,42,0.35)
+            0.6px,
+            transparent 0.7px
+        );
+
+    background-size:
+        8px 8px;
+
+    mix-blend-mode:
+        multiply;
+}
+
+.fold-left {
+    position:
+        absolute;
+
+    left:
+        0;
+
+    bottom:
+        0;
+
+    width:
+        51%;
+
+    height:
+        72%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3caa5,
+            #f0dfc0
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 100%,
+            0 100%
+        );
+}
+
+.fold-right {
+    position:
+        absolute;
+
+    right:
+        0;
+
+    bottom:
+        0;
+
+    width:
+        51%;
+
+    height:
+        72%;
+
+    background:
+        linear-gradient(
+            225deg,
+            #e1c59d,
+            #efdcbd
+        );
+
+    clip-path:
+        polygon(
+            100% 0,
+            100% 100%,
+            0 100%
+        );
+}
+
+.envelope-flap {
+    position:
+        absolute;
+
+    top:
+        -1px;
+
+    left:
+        -1px;
+
+    width:
+        calc(100% + 2px);
+
+    height:
+        66%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7e9cc,
+            #ead5b2
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 100%
+        );
+
+    z-index:
+        5;
+
+    transform-origin:
+        top center;
+
+    transition:
+        transform 1s ease;
+}
+
+.wax-seal {
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        53%;
+
+    width:
+        76px;
+
+    height:
+        76px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius:
+        50%;
+
+    z-index:
+        10;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    background:
+        radial-gradient(
+            circle at 32% 25%,
+            #c94c4c 0%,
+            #9d242c 32%,
+            #74151d 68%,
+            #5c1017 100%
+        );
+
+    box-shadow:
+        0 6px 8px
+        rgba(62,21,20,0.32),
+
+        inset 4px 4px 8px
+        rgba(255,255,255,0.18),
+
+        inset -5px -6px 9px
+        rgba(45,0,0,0.28);
+}
+
+.wax-seal::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -4px;
+
+    border-radius:
+        47% 53% 49% 51% /
+        52% 48% 54% 46%;
+
+    border:
+        4px solid
+        rgba(116,20,27,0.55);
+}
+
+.wax-seal::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        24px;
+
+    height:
+        10px;
+
+    top:
+        12px;
+
+    left:
+        14px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,0.22);
+
+    transform:
+        rotate(-28deg);
+
+    filter:
+        blur(1px);
+}
+
+.wax-center {
+    width:
+        47px;
+
+    height:
+        47px;
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    color:
+        rgba(70,8,13,0.75);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        25px;
+
+    border:
+        1px solid
+        rgba(70,8,13,0.35);
+
+    box-shadow:
+        inset 2px 2px 3px
+        rgba(45,0,0,0.25),
+
+        inset -1px -1px 2px
+        rgba(255,100,100,0.08);
+}
+
+.letter-paper {
+    position:
+        absolute;
+
+    left:
+        7%;
+
+    bottom:
+        8%;
+
+    width:
+        86%;
+
+    height:
+        88%;
+
+    padding:
+        35px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf0,
+            #f5ead4
+        );
+
+    box-shadow:
+        0 5px 18px
+        rgba(70,45,30,0.18);
+
+    z-index:
+        2;
+
+    opacity:
+        0;
+
+    transform:
+        translateY(85%);
+
+    transition:
+        transform 1.2s
+        cubic-bezier(.22,.61,.36,1),
+
+        opacity 0.4s ease;
+
+    pointer-events:
+        none;
+}
+
+.letter-paper-content {
+    font-family:
+        Georgia,
+        serif;
+
+    color:
+        #5c463a;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+.letter-paper-content h3 {
+    margin-bottom:
+        20px;
+
+    font-size:
+        20px;
+
+    font-weight:
+        normal;
+}
+
+.letter-date {
+    text-align:
+        right;
+
+    font-size:
+        10px;
+
+    color:
+        #967d6d;
+
+    margin-bottom:
+        25px;
+}
+
+.letter-hint {
+    margin-top:
+        28px;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        1px;
+
+    color:
+        #8e7667;
+
+    animation:
+        hintPulse 2s
+        ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+    0%,
+    100% {
+        opacity:
+            0.45;
+    }
+
+    50% {
+        opacity:
+            1;
+    }
+}
+
+.letter-open .envelope-flap {
+    transform:
+        rotateX(180deg);
+}
+
+.letter-open .letter-paper {
+    opacity:
+        1;
+
+    transform:
+        translateY(-15%);
+
+    z-index:
+        20;
+
+    pointer-events:
+        auto;
+}
+
+.letter-open .wax-seal {
+    animation:
+        waxBreak 0.65s
+        ease forwards;
+}
+
+@keyframes waxBreak {
+    0% {
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        opacity:
+            1;
+    }
+
+    45% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.12)
+            rotate(-4deg);
+
+        opacity:
+            1;
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%)
+            scale(0.65)
+            rotate(8deg);
+
+        opacity:
+            0;
+    }
+}
+
+
+/* =========================================================
+   PAGINA DELLA LETTERA
+========================================================= */
+
+#letter-page {
+    display:
+        none;
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100vh;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        flex-start;
+
+    padding:
+        5vh 18px;
+
+    overflow-y:
+        auto;
+
+    overflow-x:
+        hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #f6ead4 0%,
+            #e8d4b3 70%,
+            #dcc5a0 100%
+        );
+
+    opacity:
+        0;
+
+    transition:
+        opacity 0.8s ease;
+
+    z-index:
+        100;
+}
+
+#letter-page[style*="display: flex"] {
+    display:
+        flex !important;
+
+    align-items:
+        center;
+}
+
+
+/* =========================================================
+   PAPIRO
+========================================================= */
+
+.papyrus {
+    position:
+        relative;
+
+    width:
+        min(92vw, 680px);
+
+    min-height:
+        90vh;
+
+    height:
+        auto;
+
+    flex-shrink:
+        0;
+
+    margin:
+        0 auto;
+
+    padding:
+        65px
+        clamp(32px, 7vw, 70px)
+        70px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 35%,
+            rgba(255,255,255,0.48),
+            transparent 55%
+        ),
+
+        radial-gradient(
+            ellipse at 10% 8%,
+            rgba(122,82,43,0.10),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            ellipse at 90% 92%,
+            rgba(122,82,43,0.12),
+            transparent 30%
+        ),
+
+        #f5e6c8;
+
+    border:
+        1px solid
+        rgba(112,77,45,0.30);
+
+    box-shadow:
+        0 18px 45px
+        rgba(64,42,26,0.25),
+
+        inset 0 0 45px
+        rgba(120,82,45,0.10);
+
+    color:
+        #554035;
+
+    transform:
+        scale(0.96);
+
+    transition:
+        transform 0.8s ease;
+}
+
+.papyrus::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        14px;
+
+    border:
+        1px solid
+        rgba(123,87,54,0.22);
+
+    pointer-events:
+        none;
+}
+
+.papyrus::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        19px;
+
+    border:
+        1px dashed
+        rgba(123,87,54,0.10);
+
+    pointer-events:
+        none;
+}
+
+.papyrus-content {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(14px, 2.2vw, 17px);
+
+    line-height:
+        1.95;
+
+    text-align:
+        left;
+
+    color:
+        #574238;
+}
+
+.written-date {
+    text-align:
+        right;
+
+    font-size:
+        11px;
+
+    font-style:
+        italic;
+
+    letter-spacing:
+        0.8px;
+
+    color:
+        #927765;
+
+    margin:
+        0 0 42px;
+}
+
+#typed-letter {
+    white-space:
+        pre-wrap;
+
+    word-wrap:
+        break-word;
+
+    overflow-wrap:
+        break-word;
+
+    text-align:
+        left;
+}
+
+
+/* =========================================================
+   FIRMA
+========================================================= */
+
+.letter-signature {
+    margin-top:
+        50px;
+
+    padding-top:
+        22px;
+
+    border-top:
+        1px solid
+        rgba(120,82,45,0.16);
+
+    text-align:
+        right;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-style:
+        italic;
+
+    font-size:
+        17px;
+
+    color:
+        #654b3e;
+
+    opacity:
+        0;
+
+    transition:
+        opacity 1s ease;
+}
+
+.letter-signature::after {
+    content:
+        "♥  ♥  ♥  ♥  ♥  ♥  ♥  ♥  ♥  ♥";
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    margin-top:
+        22px;
+
+    padding-top:
+        14px;
+
+    border-top:
+        1px solid
+        rgba(120,82,45,0.16);
+
+    text-align:
+        center;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        5px;
+
+    color:
+        #8f3030;
+
+    opacity:
+        0.65;
+
+    white-space:
+        nowrap;
+
+    overflow:
+        hidden;
+}
+
+
+/* =========================================================
+   PULSANTE MOSTRA TUTTA LA LETTERA
+========================================================= */
+
+#skipTyping {
+    display:
+        block;
+
+    position:
+        relative;
+
+    z-index:
+        200;
+
+    width:
+        max-content;
+
+    margin:
+        18px auto 0;
+
+    padding:
+        9px 16px;
+
+    border:
+        1px solid
+        rgba(120,82,45,0.25);
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(245,230,200,0.75);
+
+    color:
+        #765d4f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        0.5px;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 3px 10px
+        rgba(70,45,30,0.10);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        opacity 0.2s ease;
+}
+
+#skipTyping:hover {
+    background:
+        rgba(255,245,225,0.95);
+
+    transform:
+        translateY(-2px);
+
+    opacity:
+        1;
+}
+
+#skipTyping:active {
+    transform:
+        scale(0.96);
+}
+
+
+/* =========================================================
+   TRANSIZIONE LETTERA → TELEFONO
+========================================================= */
+
+#letter-transition {
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        9999;
+
+    display:
+        none;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        #eadcc4;
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+    transition:
+        opacity 0.6s ease;
+}
+
+#letter-transition.active {
+    display:
+        flex;
+
+    opacity:
+        1;
+}
+
+.flying-papyrus {
+    width:
+        min(620px, 80vw);
+
+    height:
+        min(760px, 75vh);
+
+    background:
+        #ead8b8;
+
+    border:
+        8px solid
+        #c8a77b;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.25);
+
+    transform:
+        scale(1);
+
+    transition:
+        transform 1.3s ease-in,
+        opacity 1.1s ease-in;
+}
+
+#letter-transition.closing .flying-papyrus {
+    transform:
+        scaleY(0.08)
+        scaleX(0.65)
+        rotate(-8deg)
+        translate(180px, -220px);
+
+    opacity:
+        0;
+}
+
+
+/* =========================================================
+   TELEFONO
+========================================================= */
+
+#phone-section {
+    display:
+        none;
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    min-height:
+        100vh;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        30px 20px;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #f8eee0,
+            #dfcdb2
+        );
+
+    opacity:
+        0;
+
+    z-index:
+        500;
+
+    overflow:
+        hidden;
+}
+
+#phone-section.phone-visible {
+    display:
+        flex;
+}
+
+.phone-container {
+    width:
+        100%;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+}
+
+
+/* =========================================================
+   TELEFONO A CONCHIGLIA
+========================================================= */
+
+.flip-phone {
+    position:
+        relative;
+
+    width:
+        290px;
+
+    perspective:
+        1000px;
+
+    filter:
+        drop-shadow(
+            0 20px 25px
+            rgba(0,0,0,0.30)
+        );
+
+    cursor:
+        pointer;
+}
+
+
+/* =========================================================
+   TELEFONO CHIUSO
+========================================================= */
+
+.phone-closed {
+    position:
+        relative;
+
+    width:
+        290px;
+
+    height:
+        400px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #6d493d,
+            #432b25
+        );
+
+    border:
+        3px solid
+        #34201c;
+
+    box-shadow:
+        inset 0 0 0 2px
+        rgba(255,255,255,0.08),
+
+        inset 0 -15px 30px
+        rgba(0,0,0,0.18);
+
+    color:
+        #e8d9c5;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.6s ease;
+
+    z-index:
+        10;
+}
+
+.closed-camera {
+    position:
+        absolute;
+
+    top:
+        25px;
+
+    right:
+        28px;
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #1c1715 0%,
+            #30211d 55%,
+            #826357 56%,
+            #826357 100%
+        );
+
+    box-shadow:
+        0 0 0 3px
+        #38241f;
+}
+
+.closed-brand {
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        5px;
+
+    margin-bottom:
+        35px;
+
+    color:
+        #c8a994;
+}
+
+.closed-heart {
+    font-size:
+        65px;
+
+    color:
+        #b95b62;
+
+    text-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.3);
+
+    animation:
+        heartPulse 2s
+        ease-in-out infinite;
+}
+
+.phone-closed p {
+    position:
+        absolute;
+
+    bottom:
+        25px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        #c9b1a0;
+}
+
+@keyframes heartPulse {
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.08);
+    }
+}
+
+
+/* =========================================================
+   TELEFONO APERTO
+========================================================= */
+
+.phone-top,
+.phone-bottom,
+.phone-hinge {
+    display:
+        none;
+}
+
+.flip-phone.phone-open {
+    width:
+        290px;
+
+    height:
+        500px;
+}
+
+.flip-phone.phone-open .phone-closed {
+    display:
+        none;
+}
+
+.flip-phone.phone-open .phone-top {
+    display:
+        block;
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        290px;
+
+    height:
+        235px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #65443a,
+            #4a3029
+        );
+
+    border-radius:
+        28px 28px 12px 12px;
+
+    padding:
+        18px;
+
+    box-shadow:
+        inset 0 0 0 2px
+        rgba(255,255,255,0.05);
+
+    transform-origin:
+        bottom center;
+
+    animation:
+        phoneOpenTop 0.9s
+        ease forwards;
+
+    z-index:
+        2;
+}
+
+.flip-phone.phone-open .phone-hinge {
+    display:
+        block;
+
+    position:
+        absolute;
+
+    top:
+        223px;
+
+    left:
+        0;
+
+    width:
+        290px;
+
+    height:
+        14px;
+
+    background:
+        #30201c;
+
+    border-radius:
+        5px;
+
+    z-index:
+        5;
+}
+
+.flip-phone.phone-open .phone-bottom {
+    display:
+        block;
+
+    position:
+        absolute;
+
+    top:
+        237px;
+
+    left:
+        0;
+
+    width:
+        290px;
+
+    height:
+        263px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #6a473c,
+            #4d322b
+        );
+
+    border-radius:
+        12px 12px 28px 28px;
+
+    padding:
+        25px;
+
+    animation:
+        phoneBottomAppear 0.7s
+        ease forwards;
+
+    z-index:
+        1;
+}
+
+
+/* =========================================================
+   SCHERMO TELEFONO
+========================================================= */
+
+.phone-screen {
+    height:
+        175px;
+
+    border-radius:
+        15px;
+
+    background:
+        #1d1b18;
+
+    padding:
+        15px;
+
+    border:
+        4px solid
+        #765347;
+
+    box-shadow:
+        inset 0 0 15px
+        rgba(0,0,0,0.6);
+}
+
+.phone-brand {
+    text-align:
+        center;
+
+    color:
+        #c6a58f;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        3px;
+}
+
+.phone-display {
+    margin-top:
+        25px;
+
+    text-align:
+        center;
+
+    color:
+        #e8d9c5;
+
+    font-family:
+        Georgia,
+        serif;
+}
+
+.phone-display span {
+    font-size:
+        30px;
+}
+
+.phone-display p {
+    margin-top:
+        10px;
+
+    font-size:
+        13px;
+}
+
+.phone-top > .phone-speaker {
+    position:
+        absolute;
+
+    bottom:
+        10px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    width:
+        55px;
+
+    height:
+        4px;
+
+    border-radius:
+        10px;
+
+    background:
+        #321f1a;
+}
+
+
+/* =========================================================
+   TASTIERINO NUMERICO
+========================================================= */
+
+.phone-keypad {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        12px;
+}
+
+.phone-keypad button {
+    height:
+        48px;
+
+    border:
+        none;
+
+    border-radius:
+        8px;
+
+    background:
+        #4a3029;
+
+    color:
+        #f0dfca;
+
+    font-size:
+        18px;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        inset 0 1px 2px
+        rgba(255,255,255,0.12),
+
+        0 3px 5px
+        rgba(0,0,0,0.2);
+
+    transition:
+        transform 0.12s ease,
+        background 0.12s ease;
+}
+
+.phone-keypad button:hover {
+    background:
+        #573a31;
+}
+
+.phone-keypad button:active {
+    transform:
+        scale(0.92);
+}
+
+
+/* =========================================================
+   ANIMAZIONI TELEFONO
+========================================================= */
+
+@keyframes phoneOpenTop {
+    from {
+        transform:
+            rotateX(-90deg);
+
+        opacity:
+            0;
+    }
+
+    to {
+        transform:
+            rotateX(0deg);
+
+        opacity:
+            1;
+    }
+}
+
+@keyframes phoneBottomAppear {
+    from {
+        opacity:
+            0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   SCROLLBAR LETTERA
+========================================================= */
+
+#letter-page::-webkit-scrollbar {
+    width:
+        5px;
+}
+
+#letter-page::-webkit-scrollbar-track {
+    background:
+        rgba(120,90,60,0.07);
+}
+
+#letter-page::-webkit-scrollbar-thumb {
+    background:
+        rgba(120,90,60,0.25);
+
+    border-radius:
+        10px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------
+       MAIL
+    ----------------------------- */
+
+    .home {
+        padding:
+            16px;
+    }
+
+    .mail-card {
+        padding:
+            22px
+            17px
+            25px;
+    }
+
+    .mail-row {
+        gap:
+            12px;
+    }
+
+    .mail-row span {
+        width:
+            50px;
+    }
+
+    .subject-row strong {
+        font-size:
+            14px;
+    }
+
+    .mail-preview {
+        font-size:
+            15px;
+    }
+
+
+    /* -----------------------------
+       ALBUM
+    ----------------------------- */
+
+    .album-content h2 {
+        font-size:
+            27px;
+    }
+
+    .polaroid {
+        width:
+            min(82vw, 300px);
+    }
+
+
+    /* -----------------------------
+       BUSTA
+    ----------------------------- */
+
+    .letter-intro h2 {
+        font-size:
+            27px;
+    }
+
+    .vintage-letter {
+        width:
+            min(88vw, 350px);
+    }
+
+
+    /* -----------------------------
+       PAGINA LETTERA
+    ----------------------------- */
+
+    #letter-page {
+        padding:
+            3vh 10px;
+    }
+
+    .papyrus {
+        width:
+            94vw;
+
+        min-height:
+            91vh;
+
+        padding:
+            55px
+            28px
+            60px;
+    }
+
+    .papyrus-content {
+        font-size:
+            14px;
+
+        line-height:
+            1.9;
+    }
+
+    .written-date {
+        margin-bottom:
+            32px;
+    }
+
+    .letter-signature {
+        margin-top:
+            40px;
+
+        font-size:
+            16px;
+    }
+
+    #skipTyping {
+        margin-top:
+            16px;
+
+        font-size:
+            10px;
+
+        padding:
+            8px 14px;
+    }
+
+
+    /* -----------------------------
+       TRANSIZIONE
+    ----------------------------- */
+
+    .flying-papyrus {
+        width:
+            82vw;
+
+        height:
+            72vh;
+    }
+
+
+    /* -----------------------------
+       TELEFONO
+    ----------------------------- */
+
+    .flip-phone {
+        width:
+            270px;
+    }
+
+    .phone-closed {
+        width:
+            270px;
+
+        height:
+            380px;
+    }
+
+    .flip-phone.phone-open {
+        width:
+            270px;
+
+        height:
+            480px;
+    }
+
+    .flip-phone.phone-open .phone-top {
+        width:
+            270px;
+
+        height:
+            225px;
+    }
+
+    .flip-phone.phone-open .phone-hinge {
+        width:
+            270px;
+
+        top:
+            213px;
+    }
+
+    .flip-phone.phone-open .phone-bottom {
+        width:
+            270px;
+
+        top:
+            227px;
+
+        height:
+            253px;
+    }
+
+    .phone-screen {
+        height:
+            165px;
+    }
+
+    .phone-keypad {
+        gap:
+            9px;
+    }
+
+    .phone-keypad button {
+        height:
+            44px;
+
+        font-size:
+            17px;
+    }
+}
+
+
+/* =========================================================
+   SCHERMI MOLTO PICCOLI
+========================================================= */
+
+@media (max-height: 700px) {
+
+    #letter-page {
+        padding:
+            20px 10px;
+    }
+
+    .papyrus {
+        min-height:
+            auto;
+
+        padding:
+            40px 28px 50px;
+    }
+
+    .letter-signature {
+        margin-top:
+            35px;
+    }
+
+    .flip-phone.phone-open {
+        transform:
+            scale(0.88);
+    }
+
+    .phone-closed {
+        transform:
+            scale(0.88);
+    }
+}
+
+
+/* =========================================================
+   CONTINUE LETTER
+========================================================= */
+
+#continueLetter {
+    display:
+        none;
+
+    margin:
+        18px auto 30px;
+
+    padding:
+        10px 18px;
+
+    border:
+        1px solid
+        rgba(120, 82, 45, 0.25);
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(245, 230, 200, 0.75);
+
+    color:
+        #765d4f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        0.5px;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 3px 10px
+        rgba(70, 45, 30, 0.10);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        opacity 0.2s ease;
+}
+
+#continueLetter:hover {
+    background:
+        rgba(255, 245, 225, 0.95);
+
+    transform:
+        translateY(-2px);
+}
+
+#continueLetter:active {
+    transform:
+        scale(0.96);
+}
+
+/* =====================================================
+   SCHERMATA GIRADISCHI
+===================================================== */
+
+#record-section {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow-y: auto;
+
+    padding: 40px 20px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #f8eee5 0%,
+            #ead8c9 55%,
+            #d8bdaa 100%
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.8s ease;
+}
+
+
+#record-section.record-visible {
+
+    opacity: 1;
+}
+
+
+/* =====================================================
+   CONTENUTO
+===================================================== */
+
+.record-content {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   TESTI
+===================================================== */
+
+.record-small {
+
+    margin: 0 0 10px;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #9a7462;
+}
+
+
+.record-content h2 {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    color: #5d463b;
+}
+
+
+.record-subtitle {
+
+    margin: 10px 0 30px;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 13px;
+
+    color: #8d6e60;
+}
+
+
+/* =====================================================
+   AREA GIRADISCHI
+===================================================== */
+
+.turntable-area {
+
+    position: relative;
+
+    width: 760px;
+
+    max-width: 95vw;
+
+    min-height: 390px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 100px;
+}
+
+
+/* =====================================================
+   GIRADISCHI
+===================================================== */
+
+.turntable {
+
+    position: relative;
+
+    width: 390px;
+
+    height: 270px;
+
+    flex-shrink: 0;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #8d6250,
+            #654638
+        );
+
+    box-shadow:
+        0 25px 50px
+        rgba(65, 42, 31, 0.28),
+
+        inset 0 1px 0
+        rgba(255,255,255,0.25);
+
+    transform:
+        perspective(800px)
+        rotateX(3deg);
+}
+
+
+/* =====================================================
+   PIATTO
+===================================================== */
+
+.turntable-platter {
+
+    position: absolute;
+
+    left: 45px;
+    top: 25px;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #51433e 0%,
+            #302b29 60%,
+            #1d1b1a 100%
+        );
+
+    box-shadow:
+        inset 0 0 0 8px
+        rgba(255,255,255,0.04),
+
+        0 10px 20px
+        rgba(0,0,0,0.25);
+}
+
+
+.platter-center {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    background: #d5a17f;
+
+    transform:
+        translate(-50%, -50%);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(255,255,255,0.1);
+}
+
+
+/* =====================================================
+   VINILE SUL PIATTO
+===================================================== */
+
+.record-on-player {
+
+    position: absolute;
+
+    left: 45px;
+    top: 25px;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    transform:
+        scale(0.65);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.6s cubic-bezier(.2,.8,.2,1);
+
+    background:
+        radial-gradient(
+            circle,
+            #151313 0%,
+            #090909 65%,
+            #000 100%
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,0.35);
+}
+
+
+.record-on-player.active {
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+}
+
+
+/* =====================================================
+   ROTAZIONE VINILE
+===================================================== */
+
+.record-on-player.active {
+
+    animation:
+        vinylSpin 2.2s linear infinite;
+}
+
+
+@keyframes vinylSpin {
+
+    from {
+        transform:
+            scale(1)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            scale(1)
+            rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   SOLCHI
+===================================================== */
+
+.record-grooves,
+.vinyl-grooves {
+
+    position: absolute;
+
+    inset: 12%;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            transparent 0px,
+            transparent 3px,
+            rgba(255,255,255,0.055) 4px,
+            transparent 5px
+        );
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   ETICHETTA
+===================================================== */
+
+.record-label {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        #c9947d;
+
+    color: #fff7f0;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        inset 0 0 0 3px
+        rgba(255,255,255,0.15);
+}
+
+
+.record-hole {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #302b29;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+/* =====================================================
+   BRACCIO
+===================================================== */
+
+.tonearm {
+
+    position: absolute;
+
+    right: 32px;
+    top: 28px;
+
+    width: 115px;
+    height: 210px;
+
+    transform-origin:
+        25px 25px;
+
+    transform:
+        rotate(8deg);
+
+    transition:
+        transform 0.9s cubic-bezier(.4,0,.2,1);
+
+    z-index: 20;
+}
+
+
+.record-on-player.active
+~ .tonearm {
+
+    transform:
+        rotate(28deg);
+}
+
+
+/* =====================================================
+   BASE BRACCIO
+===================================================== */
+
+.tonearm-base {
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #c9a58f,
+            #78594b
+        );
+
+    box-shadow:
+        0 5px 10px
+        rgba(0,0,0,0.25);
+}
+
+
+/* =====================================================
+   ASTA
+===================================================== */
+
+.tonearm-arm {
+
+    position: absolute;
+
+    left: 24px;
+    top: 25px;
+
+    width: 90px;
+    height: 7px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d4b5a4,
+            #816154
+        );
+
+    transform:
+        rotate(8deg);
+
+    transform-origin:
+        left center;
+}
+
+
+/* =====================================================
+   TESTINA
+===================================================== */
+
+.tonearm-head {
+
+    position: absolute;
+
+    left: 94px;
+    top: 35px;
+
+    width: 25px;
+    height: 34px;
+
+    border-radius:
+        4px 4px 8px 8px;
+
+    background:
+        #4c3932;
+
+    transform:
+        rotate(8deg);
+
+    box-shadow:
+        0 4px 8px
+        rgba(0,0,0,0.25);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.turntable-logo {
+
+    position: absolute;
+
+    right: 38px;
+    bottom: 30px;
+
+    font-size: 27px;
+
+    color: #e5bba6;
+
+    opacity: 0.8;
+}
+
+
+/* =====================================================
+   VINILE DA TRASCINARE
+===================================================== */
+
+.record-source {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor:
+        grab;
+
+    user-select: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.record-source:active {
+
+    cursor:
+        grabbing;
+}
+
+
+.record-source.dragging {
+
+    opacity: 0.45;
+
+    transform:
+        scale(0.9);
+}
+
+
+/* =====================================================
+   VINILE ESTERNO
+===================================================== */
+
+.vinyl {
+
+    position: relative;
+
+    width: 185px;
+    height: 185px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #181616 0%,
+            #090909 65%,
+            #000000 100%
+        );
+
+    box-shadow:
+        0 18px 30px
+        rgba(52,34,27,0.3);
+}
+
+
+/* =====================================================
+   ETICHETTA VINILE
+===================================================== */
+
+.vinyl-label {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        #c9947d;
+
+    color: white;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+.vinyl-hole {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #211b19;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+/* =====================================================
+   TESTO TRASCINAMI
+===================================================== */
+
+.record-source p {
+
+    margin: 12px 0 0;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #987565;
+}
+
+
+/* =====================================================
+   MESSAGGIO
+===================================================== */
+
+.record-message {
+
+    margin-top: 20px;
+
+    max-width: 500px;
+
+    opacity: 0;
+
+    transform:
+        translateY(15px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+
+.record-message.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+.record-message p {
+
+    margin: 0 0 6px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 19px;
+
+    color: #674b3d;
+}
+
+
+.record-message span {
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 12px;
+
+    color: #927466;
+}
+
+
+/* =====================================================
+   SPOTIFY
+===================================================== */
+
+.spotify-player-wrapper {
+
+    width: min(500px, 90vw);
+
+    margin-top: 22px;
+
+    opacity: 0;
+
+    transform:
+        translateY(15px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+
+.spotify-player-wrapper.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    pointer-events: auto;
+}
+
+
+.spotify-embed {
+
+    width: 100%;
+
+    min-height: 152px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(50,35,28,0.18);
+}
+
+
+/* =====================================================
+   CONTROLLI
+===================================================== */
+
+.music-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 15px;
+
+    padding: 10px 15px;
+
+    border-radius: 40px;
+
+    background:
+        rgba(255,255,255,0.45);
+
+    border:
+        1px solid
+        rgba(125,87,57,0.12);
+
+    box-shadow:
+        0 8px 20px
+        rgba(70,45,35,0.08);
+
+    opacity: 0;
+
+    transform:
+        translateY(10px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+
+.music-controls.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    pointer-events: auto;
+}
+
+
+#playPauseMusic {
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        #c7957f;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+#playPauseMusic:hover {
+
+    transform:
+        scale(1.08);
+
+    background:
+        #b98069;
+}
+
+
+.music-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    text-align: left;
+}
+
+
+.music-title {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 14px;
+
+    color: #62493d;
+}
+
+
+.music-status {
+
+    margin-top: 2px;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 9px;
+
+    color: #9b796b;
+}
+
+
+/* =====================================================
+   LINK SPOTIFY
+===================================================== */
+
+.spotify-open-link {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 10px;
+
+    color: #7f6558;
+
+    text-decoration: none;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s ease;
+}
+
+
+.spotify-open-link.active {
+
+    opacity: 0.8;
+
+    pointer-events: auto;
+}
+
+
+.spotify-open-link:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    #record-section {
+
+        align-items: flex-start;
+
+        padding-top: 35px;
+
+    }
+
+
+    .record-content h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .record-subtitle {
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .turntable-area {
+
+        width: 100%;
+
+        min-height: 650px;
+
+        flex-direction: column;
+
+        gap: 35px;
+
+    }
+
+
+    .turntable {
+
+        width: 340px;
+
+        height: 240px;
+
+    }
+
+
+    .turntable-platter,
+    .record-on-player {
+
+        width: 195px;
+        height: 195px;
+
+    }
+
+
+    .turntable-platter {
+
+        left: 35px;
+        top: 22px;
+
+    }
+
+
+    .record-on-player {
+
+        left: 35px;
+        top: 22px;
+
+    }
+
+
+    .tonearm {
+
+        right: 25px;
+
+        transform:
+            scale(0.85)
+            rotate(8deg);
+
+    }
+
+
+    .vinyl {
+
+        width: 155px;
+        height: 155px;
+
+    }
+
+
+    .spotify-player-wrapper {
+
+        width: 90vw;
+
+    }
+
+}
+/* =====================================================
+   FRECCIA GIRADISCHI → FINALE
+===================================================== */
+
+#record-section {
+    position: relative;
+}
+
+
+/* FRECCIA */
+
+.go-to-final {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 20px;
+
+    transform: translateX(-50%);
+
+    width: 60px;
+    height: 60px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #75404d;
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    animation:
+        turntable-arrow-bounce
+        1.5s ease-in-out infinite;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.go-to-final:hover {
+
+    color: #a94f65;
+
+}
+
+
+@keyframes turntable-arrow-bounce {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(-50%)
+            translateY(8px);
+
+    }
+
+}
+
+/* =====================================================
+   SCHERMATA FINALE
+===================================================== */
+
+#final-section {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #f8efe8;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+
+    z-index: 9999;
+
+    overflow: hidden;
+}
+
+
+#final-section.final-visible {
+    display: flex;
+
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.final-content {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-top: 50px;
+
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+
+/* =====================================================
+   TITOLO
+===================================================== */
+
+.final-content h1 {
+
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(
+        38px,
+        6vw,
+        82px
+    );
+
+    letter-spacing: 4px;
+
+    text-align: center;
+
+    color: #7b263a;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   FRECCIA GIRADISCHI
+===================================================== */
+
+.record-next-button {
+
+    position: fixed;
+
+    right: 35px;
+    bottom: 30px;
+
+    width: 58px;
+    height: 58px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(
+        123,
+        38,
+        58,
+        0.92
+    );
+
+    color: white;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 10000;
+
+    opacity: 1;
+    visibility: visible;
+
+    box-shadow:
+        0 8px 25px rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.record-next-button:hover {
+
+    transform:
+        translateY(4px)
+        scale(1.08);
+
+    box-shadow:
+        0 12px 30px rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+}
+
+
+.record-next-button:active {
+
+    transform:
+        translateY(7px)
+        scale(0.96);
+
+}
+
+
+/* =====================================================
+   TORTA
+===================================================== */
+
+.birthday-cake {
+
+    position: relative;
+
+    width: min(
+        430px,
+        70vw
+    );
+
+    height: 390px;
+
+    margin-top: 45px;
+
+    cursor: pointer;
+
+    transform-origin: center bottom;
+
+    transition:
+        transform 0.35s ease;
+
+    outline: none;
+}
+
+
+.birthday-cake:hover {
+
+    transform:
+        scale(1.04)
+        rotate(-1deg);
+
+}
+
+
+/* =====================================================
+   CANDELE
+===================================================== */
+
+.cake-candles {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    gap: 38px;
+
+    z-index: 5;
+}
+
+
+.candle {
+
+    position: relative;
+
+    width: 15px;
+    height: 70px;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #f6c7ca 0px,
+            #f6c7ca 9px,
+            #fff4ef 9px,
+            #fff4ef 18px
+        );
+
+    border-radius:
+        5px 5px 2px 2px;
+
+    box-shadow:
+        0 3px 5px rgba(
+            0,
+            0,
+            0,
+            0.15
+        );
+}
+
+
+.candle span {
+
+    position: absolute;
+
+    width: 11px;
+    height: 20px;
+
+    left: 2px;
+    top: -20px;
+
+    background: #ffb347;
+
+    border-radius:
+        50% 50% 50% 50%;
+
+    box-shadow:
+        0 0 12px #ffb347;
+
+    animation:
+        candleFlame 0.8s
+        infinite alternate;
+}
+
+
+@keyframes candleFlame {
+
+    from {
+        transform:
+            scale(0.85)
+            translateY(2px);
+    }
+
+    to {
+        transform:
+            scale(1.05)
+            translateY(-2px);
+    }
+
+}
+
+
+/* =====================================================
+   STRATI DELLA TORTA
+===================================================== */
+
+.cake-top {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 75px;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    width: 330px;
+    height: 90px;
+
+    background: #f0c7b8;
+
+    border-radius:
+        50% 46% 45% 48%;
+
+    border:
+        5px solid #8e4d45;
+
+    box-shadow:
+        0 8px 0 #d59a89,
+        0 15px 25px rgba(
+            0,
+            0,
+            0,
+            0.16
+        );
+}
+
+
+.cake-middle {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 145px;
+
+    transform:
+        translateX(-50%)
+        rotate(2deg);
+
+    width: 370px;
+    height: 115px;
+
+    background: #e7b5a6;
+
+    border-radius:
+        20px 18px 28px 25px;
+
+    border:
+        5px solid #8e4d45;
+
+    box-shadow:
+        0 10px 0 #c98677;
+}
+
+
+.cake-bottom {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 240px;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    width: 420px;
+    height: 120px;
+
+    background: #dca294;
+
+    border-radius:
+        25px 30px 18px 25px;
+
+    border:
+        5px solid #8e4d45;
+
+    box-shadow:
+        0 12px 0 #b97569,
+        0 20px 35px rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+}
+
+
+/* =====================================================
+   DECORAZIONE TORTA
+===================================================== */
+
+.cake-top::before,
+.cake-middle::before,
+.cake-bottom::before {
+
+    content: "♥  ♥  ♥  ♥";
+
+    position: absolute;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color: #fff4ef;
+
+    font-size: 20px;
+
+    letter-spacing: 10px;
+
+    white-space: nowrap;
+}
+
+
+.cake-top::before {
+    top: 35px;
+}
+
+
+.cake-middle::before {
+    top: 47px;
+}
+
+
+.cake-bottom::before {
+    top: 50px;
+}
+
+
+/* =====================================================
+   FOTO DA PICCOLO
+===================================================== */
+
+.child-photo-container {
+
+    position: absolute;
+
+    left: 50%;
+    top: 190px; /* leggermente più in basso */
+
+    transform:
+        translateX(-50%)
+        scale(0.5);
+
+    width: min(
+        390px,
+        72vw
+    ); /* un po' più grande */
+
+    padding: 14px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 35px rgba(
+            0,
+            0,
+            0,
+            0.22
+        );
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    z-index: 20;
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.7s ease;
+}
+
+
+.child-photo-container.photo-visible {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateX(-50%)
+        scale(1)
+        rotate(-2deg);
+}
+
+
+.child-photo-container img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 500px;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   FRASE FINALE
+===================================================== */
+
+.final-message {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 90%;
+
+    margin: 0;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    color: #70434a;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.8s ease;
+}
+
+
+.final-message.message-visible {
+
+    opacity: 1;
+
+}
+
+
+/* =====================================================
+   TORTA CLICCATA
+===================================================== */
+
+.birthday-cake.cake-open {
+
+    opacity: 0;
+
+    transform:
+        scale(0.55)
+        translateY(80px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.7s ease;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .final-content {
+
+        padding-top: 35px;
+
+    }
+
+
+    .final-content h1 {
+
+        font-size: 32px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .birthday-cake {
+
+        transform:
+            scale(0.75);
+
+        margin-top: 15px;
+
+    }
+
+
+    .birthday-cake:hover {
+
+        transform:
+            scale(0.78);
+
+    }
+
+
+    .birthday-cake.cake-open {
+
+        transform:
+            scale(0.45)
+            translateY(60px);
+
+    }
+
+
+    .record-next-button {
+
+        right: 20px;
+
+        bottom: 20px;
+
+        width: 52px;
+        height: 52px;
+
+        font-size: 30px;
+
+    }
+
+}
